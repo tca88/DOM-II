@@ -1,6 +1,6 @@
 // Your code goes here
 
-//HEADER IMAGE ANIMATION - MOUSEOVER
+//HEADER IMAGE ANIMATION - MOUSEOVER & MOUSEOUT
 const headerImage = document.querySelector('.intro img');
 // console.log(headerImage);
 
@@ -32,7 +32,7 @@ headerContainer.addEventListener('wheel', function(){
     event.currentTarget.style.padding = '10px';
 });
 
-//CONTENT SECTION - DRAG
+//CONTENT SECTION - DRAG & DOUBLECLICK
 const adventureImg = document.querySelectorAll('.img-content');
 const adventureContainer = document.querySelectorAll('.content-section');
 const adventureText = document.querySelectorAll('.text-content');
@@ -50,5 +50,14 @@ adventureImg[1].addEventListener('dblclick', function(){
     adventureContainer[1].style.flexDirection = 'row-reverse';
 });
 
+//CONTENT DESTINATION - CLICK EVENT
+const destinationText = document.querySelectorAll('.destination');
+console.log(destinationText);
 
+
+destinationText.forEach(function(text){
+    text.addEventListener('click', function(){
+            event.target.style.fontStyle = 'italic';
+        });
+});
 
