@@ -12,6 +12,11 @@ headerImage.addEventListener('mouseout', function(){
     event.target.style.opacity = '1';
 });
 
+headerImage.addEventListener('click', function(){
+    event.stopPropagation();
+    event.target.style.border = "thick solid red";
+});
+
 //H1 ANIMATION - KEYDOWN
 const pageTitle = document.querySelector('h1.logo-heading');
 // console.log(pageTitle);
@@ -31,6 +36,10 @@ headerContainer.addEventListener('wheel', function(){
     event.currentTarget.style.border = "thick solid blue";
     event.currentTarget.style.padding = '10px';
 });
+
+headerContainer.addEventListener('click', function(){
+    event.target.style.border = "thick solid green";
+})
 
 //CONTENT SECTION - DRAG & DOUBLECLICK
 const adventureImg = document.querySelectorAll('.img-content');
