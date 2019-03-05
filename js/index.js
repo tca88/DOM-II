@@ -12,9 +12,9 @@ headerImage.addEventListener('mouseout', function(){
     event.target.style.opacity = '1';
 });
 
-//H1 ANIMATION
+//H1 ANIMATION - KEYDOWN
 const pageTitle = document.querySelector('h1.logo-heading');
-console.log(pageTitle);
+// console.log(pageTitle);
 
 pageTitle.addEventListener('mouseover', function(event) {
     window.addEventListener('keydown', function(){
@@ -25,11 +25,30 @@ pageTitle.addEventListener('mouseover', function(event) {
 
 //INTRO CONTAINER ANIMATION - WHEEL
 const headerContainer = document.querySelector('.intro');
-console.log(headerContainer);
+// console.log(headerContainer);
 
 headerContainer.addEventListener('wheel', function(){
     event.currentTarget.style.border = "thick solid blue";
     event.currentTarget.style.padding = '10px';
 });
 
-//INTRO CONTAINER ANIMATION - WHEEL
+//CONTENT SECTION - DRAG
+const adventureImg = document.querySelectorAll('.img-content');
+const adventureContainer = document.querySelectorAll('.content-section');
+const adventureText = document.querySelectorAll('.text-content');
+
+// console.log(adventureImg);
+// console.log(adventureContainer);
+
+
+adventureImg[0].addEventListener('drag', function(){
+    adventureContainer[0].style.flexDirection = 'row-reverse';
+});
+
+
+adventureImg[1].addEventListener('dblclick', function(){
+    adventureContainer[1].style.flexDirection = 'row-reverse';
+});
+
+
+
