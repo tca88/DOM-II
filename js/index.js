@@ -51,6 +51,14 @@ adventureImg[1].addEventListener('dblclick', function(){
 });
 
 //CONTENT DESTINATION - CLICK EVENT
+const destinationParagraph = document.querySelectorAll('.destination p');
+
+destinationParagraph.forEach(function(p){
+    p.addEventListener('click', function(){
+            event.target.style.color = 'lightblue';
+        });
+});
+
 const destinationText = document.querySelectorAll('.destination');
 console.log(destinationText);
 
@@ -61,3 +69,38 @@ destinationText.forEach(function(text){
         });
 });
 
+
+
+//WHOLE BODY - SCROLL EVENT
+    window.addEventListener('scroll', function(){
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color = 'white';
+        pageTitle.style.color = 'black';
+        });
+
+//DESTINATION BUTTON - MOUSEDOWN EVENT
+
+const destinationBtn = document.querySelectorAll('.destination .btn');
+
+destinationBtn.forEach(function(button){
+    button.addEventListener('mousedown', function(){
+            event.target.style.transform = 'scale(1.25)';
+        });
+});
+
+//NAV - PREVENT DEFAULT
+
+const navLinks = document.querySelectorAll('.nav-link');
+
+navLinks.forEach(function(navLink){
+    navLink.addEventListener('click', function(){
+        event.preventDefault();
+    });
+});
+
+
+//WHOLE PAGE - LOAD EVENT
+
+window.addEventListener("load", function(event) {
+    alert("All resources finished loading!");
+  });
