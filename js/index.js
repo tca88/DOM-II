@@ -34,7 +34,7 @@ const headerContainer = document.querySelector('.intro');
 
 headerContainer.addEventListener('wheel', function(){
     event.currentTarget.style.border = "thick solid blue";
-    event.currentTarget.style.padding = '10px';
+    event.currentTarget.style.padding = "90px 20px 20px 20px";
 });
 
 headerContainer.addEventListener('click', function(){
